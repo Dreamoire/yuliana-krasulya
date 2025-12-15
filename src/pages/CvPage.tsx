@@ -149,15 +149,25 @@ export default function CvPage() {
             <section className="cv-skills">
               <h2 className="cv-section-title">Compétences techniques</h2>
               <ul className="cv-skills-list">
-                <li>HTML, CSS, JavaScript, TypeScript</li>
-                <li>React, Node.js, NPM</li>
-                <li>Git, GitHub</li>
-                <li>API REST, JSON</li>
-                <li>UI/UX, Figma</li>
-                <li>Adobe Photoshop, Adobe Illustrator</li>
-                <li>Terminal, VS Code</li>
-                <li>Méthodes agiles / Scrum</li>
-                <li>Maîtrise de l’IA générative</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>MySQL (en cours)</li>
+                <li>API REST</li>
+                <li>Web services REST</li>
+                <li>JSON</li>
+                <li>UI/UX design</li>
+                <li>Wireframes</li>
+                <li>Web design</li>
+                <li>Web development</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Agile</li>
+                <li>Scrum</li>
+                <li>Trello</li>
               </ul>
             </section>
 
@@ -185,30 +195,17 @@ export default function CvPage() {
             </section>
 
             <section className="cv-softskills">
-              <h2 className="cv-section-title">Compétences professionnelles consolidées</h2>
+              <h2 className="cv-section-title">Compétences professionnelles</h2>
 
-              <ul className="cv-list">
-                <li>
-                  <strong>Créativité</strong> — compréhension visuelle, conception d’interfaces, collaboration UI/UX.
-                </li>
-                <li>
-                  <strong>Persévérance</strong> — forte capacité d’adaptation et de résolution de problèmes.
-                </li>
-                <li>
-                  <strong>Adaptabilité</strong> — aisance dans les changements d’outils et d’organisation.
-                </li>
-                <li>
-                  <strong>Gestion du stress</strong> — performance stable en situation de rush.
-                </li>
-                <li>
-                  <strong>Travail en équipe</strong> — coordination fluide avec des équipes nombreuses.
-                </li>
-                <li>
-                  <strong>Autonomie</strong> — organisation personnelle et prise d’initiatives.
-                </li>
-                <li>
-                  <strong>Polyvalence</strong> — gestion simultanée de missions variées.
-                </li>
+              <ul className="cv-skills-list">
+                <li>Autonomie (autonomy)</li>
+                <li>Curiosité technique (technical curiosity)</li>
+                <li>Esprit d’équipe (team spirit)</li>
+                <li>Capacité d’apprentissage rapide (quick learning)</li>
+                <li>Adaptabilité (adaptability)</li>
+                <li>Collaboration</li>                
+                <li>Résolution de problèmes (problem solving)</li>
+                <li>Créativité (creativity)</li>                
               </ul>
 
               <h3 className="cv-sub-title">Autres soft skills</h3>

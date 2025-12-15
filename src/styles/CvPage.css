@@ -326,7 +326,171 @@
 }
 
 @media print {
+  @page {
+    margin:3mm;
+  }
+ 
   .cv-download-btn {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .cv-page {
+    background: #fff !important;
+    color: #0f0f0f !important;
+    padding-top: 0 !important;
+  }
+
+  .cv-page__wrapper {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 10pt !important;
+  }
+
+  .cv-header {
+    background-color: #f3f5f7 !important;
+    color: #0f0f0f !important;
+
+    margin-top: 0 !important;
+    padding: 2mm 5mm 2mm !important;
+
+    display: grid !important;
+    grid-template-columns: 25% 75% !important;
+    grid-template-areas:
+      "contact top"
+      "contact profile" !important;
+    column-gap: 8mm !important;
+    row-gap: 3mm !important;
+  }
+
+  .cv-title {
+    font-size: 11pt !important;
+    margin: 0 0 2mm 0 !important;
+    letter-spacing: 0.06em !important;
+    color: #0f0f0f !important;
+  }
+
+  .cv-job {
+    font-size: 10pt !important;
+    margin: 0 !important;
+    letter-spacing: 0.05em !important;
+    color: #0f0f0f !important;
+    font-weight: 500 !important;
+  }
+
+  .cv-contact {
+    grid-area: contact !important;
+    padding-left: 0 !important;
+    text-align: left !important;
+  }
+
+  .cv-contact p,
+  .cv-contact a {
+    color: #0f0f0f !important;
+    text-align: left !important;
+    font-size: 9pt !important;
+    line-height: 10pt !important;
+  }
+
+  .cv-contact a {
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-bottom: 0 !important;
+  }
+
+  .cv-contact__photo {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin: 0 0 1mm 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  .cv-header__top {
+    grid-area: top !important;
+    align-items: start !important;
+  }
+
+  .cv-profile {
+    grid-area: profile !important;
+    padding: 0 !important;
+    font-size: 10pt !important;
+    line-height: 10pt !important;
+    position: static !important;
+  }
+
+  .cv-profile::before,
+  .cv-profile::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .cv-profile p {
+    margin: 0 0 1.2mm 0 !important;
+    max-width: 65ch !important;
+  }
+
+  .cv-layout {
+    display: grid !important;
+    grid-template-columns: 30% 70% !important;
+    column-gap: 5mm !important;
+    margin: 0 !important;
+  }
+
+  .cv-sidebar {
+    background-color: #f3f5f7 !important;
+    padding: 6mm 6mm !important;
+    font-size: 10pt !important;
+    line-height: 10pt !important;
+  }
+
+  .cv-content {
+    background-color: #fff !important;
+    margin: 0 !important;
+    padding: 6mm 0 !important;
+    max-width: 70ch !important;
+    font-size: 9pt !important;
+  }
+
+  .cv-section-title {
+    font-size: 10pt !important;
+    margin: 0 0 1.2mm 0 !important;
+    letter-spacing: 0.05em !important;
+    color: #e63946 !important;
+  }
+
+  .cv-sub-title {
+    font-size: 10pt !important;   
+    color: #1c2a35 !important;
+  }
+
+.cv-skills-list {
+    display: flex !important;
+    flex-wrap: wrap !important;    
+    padding: 2mm !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+  .cv-skills-list li {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 10pt !important;
+    line-height: 10pt !important;
+    color: #0f0f0f !important;
+    white-space: nowrap !important;
   }
 }
+
