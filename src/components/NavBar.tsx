@@ -63,7 +63,7 @@ function NavBar() {
          
             <button
               type="button"
-              className="nav-burger"
+              className={`nav-burger${isMenuOpen ? " nav-burger--open" : ""}`}
               aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={isMenuOpen}
               aria-controls={menuId}

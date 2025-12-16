@@ -34,7 +34,19 @@
 .intro-text {
   display: grid;
   gap: 0.75rem;
-  max-width: 65ch;
+  max-width: 65ch;  
+}
+
+.intro-text h1 {
+  font-size:  clamp(1.2rem, 3.5vw, 2rem);
+  line-height: 1.15; 
+}
+
+
+.intro-text p {
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.6;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -52,5 +64,6 @@
   .intro-photo {
     width: clamp(120px, 35vw, 180px);
   }
+  
 }
 

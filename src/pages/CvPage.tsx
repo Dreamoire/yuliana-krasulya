@@ -14,7 +14,7 @@ export default function CvPage() {
           <div className="cv-header__top">
             <section className="cv-header__titles">
               <h1 className="cv-title">Yuliana Krasulya</h1>
-              <h2 className="cv-job">Développeur web (en formation)</h2>
+              <h2 className="cv-job"> DÉVELOPPEUR WEB FULL STACK JUNIOR – ALTERNANCE (React / Node.js) </h2>
             </section>
           </div>
 
@@ -37,7 +37,17 @@ export default function CvPage() {
                 </a>
               </p>
               <p>
-                LinkedIn :{" "}
+                Portfolio en ligne: {" "}
+                                <a
+                  href="https://www.dreamoire.fr/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  dreamoire.fr
+                </a>
+              </p>
+              <p>
+                LinkedIn:{" "}
                 <a
                   href="https://www.linkedin.com/in/yuliana-krasulya/"
                   target="_blank"
@@ -47,7 +57,7 @@ export default function CvPage() {
                 </a>
               </p>
               <p>
-                GitHub :{" "}
+                GitHub:{" "}
                 <a
                   href="https://github.com/Dreamoire/"
                   target="_blank"
@@ -69,29 +79,30 @@ export default function CvPage() {
 
           <section className="cv-profile">
             <p>
-              Ancienne artiste et maquettiste, j’ai développé une maîtrise
-              visuelle, un sens esthétique affirmé, une attention au détail et une
-              créativité solide. Ma déficience auditive a renforcé mon sens de
-              l’observation et ma précision visuelle, des qualités que j’applique
-              désormais au développement web.
-            </p>
-            <p>
-              En tant qu’apprenti développeur, je m’engage à apporter fiabilité,
-              rigueur, constance et sens du travail bien fait. J’ai choisi ce
-              métier parce qu’il réunit ce qui me motive profondément : créer,
-              analyser et collaborer. Le développement web est pour moi une voie
-              d’évolution durable.
-            </p>
-            <p>
-              La Wild Code School m’offre un cadre d’apprentissage exigeant que
-              je renforce par une pratique régulière. Nous y développons le
-              travail d’équipe, la communication et les méthodes pro — des
-              compétences qui me préparent à m’intégrer rapidement et
-              efficacement dans une équipe.
+              Développeur Web Full Stack junior en reconversion, 
+              issue du design graphique et de l’UI/UX, actuellement en formation 
+              à la Wild Code School.
+              Spécialisée en React, JavaScript et Node.js, avec une forte sensibilité 
+              UX et une rigueur opérationnelle acquise en environnement professionnel exigeant.
+              <br/>
+              Objectif : intégrer une entreprise en alternance 
+              (CDA – Titre RNCP niveau 6) à partir de mars 2026, dans une équipe 
+              agile orientée qualité et collaboration.
+
             </p>
           </section>
         </header>
-
+        <div className="skills-mention"> 
+          HTML, HTML5, CSS, CSS3, Responsive design, JavaScript, 
+          JavaScript ES6, TypeScript, React, React Hooks, Context API, 
+          Gestion d’état, Développement Frontend, Node.js, Express.js, 
+          Développement Backend, API REST, Web services REST, JSON, Consommation d’API, 
+          MySQL, Bases de données relationnelles, UI design, UX design, UI/UX, 
+          Wireframes, Web design, Figma, Adobe Suite, Intégration web, Git, GitHub, 
+          Contrôle de version, Méthodes agiles, Agile, Scrum, Trello, Vercel, 
+          Déploiement web, Développement web, Applications web, Travail en équipe technique,
+          Développement web, Développement Frontend, Développement Full Stack
+        </div>
         <div className="cv-layout">
           <aside className="cv-sidebar">
             <section className="cv-education">
@@ -99,14 +110,16 @@ export default function CvPage() {
 
               <article>
                 <h3 className="cv-sub-title">
-                  2025 – 2026 (en cours) • Wild Code School – Développeur Web
+                  2025 – 2026 • Wild Code School – Développeur Web
                 </h3>
-                <p>Programmation front-end/back-end, React, Node.js, UI/UX, Scrum.</p>
+                <p>Titre RNCP niveau 5 (Bac+2) en cours, Développeur 
+                  Web et Web Mobile (Full Stack, React/Node.js).  
+                  </p>
               </article>
 
               <article>
                 <h3 className="cv-sub-title">À partir de mars 2026 (prévue) • CDA – Alternance</h3>
-                <p>Concepteur Développeur d’Applications en alternance • 18 mois.</p>
+                <p> CDA: Titre RNCP niveau 6 (Bac+3/4) CDA - Alternance 18 mois </p>
               </article>
 
               <article>
@@ -145,49 +158,102 @@ export default function CvPage() {
             </section>
           </aside>
 
-          <section className="cv-content">
-            <section className="cv-skills">
-              <h2 className="cv-section-title">Compétences techniques</h2>
-              <ul className="cv-skills-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>MySQL (en cours)</li>
-                <li>API REST</li>
-                <li>Web services REST</li>
-                <li>JSON</li>
-                <li>UI/UX design</li>
-                <li>Wireframes</li>
-                <li>Web design</li>
-                <li>Web development</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>Agile</li>
-                <li>Scrum</li>
-                <li>Trello</li>
-              </ul>
-            </section>
+          <section className="cv-skills" aria-labelledby="cv-skills-title">
+  <h2 id="cv-skills-title" className="cv-section-title">
+    Compétences techniques
+  </h2>
 
-            <section className="cv-projects">
-              <h2 className="cv-section-title">Projets réalisés</h2>
-              <p>
-                Développement de projets individuels (solo rush) et collaboratifs, allant
-                de pages HTML/CSS simples à des applications web complètes en React.
-                Intégration d’APIs externes, développement d’interfaces dynamiques, gestion
-                d’état, organisation du code, mise en place d’algorithmes simples, maquettes
-                Figma et collaboration en équipe selon les méthodes agiles.
-              </p>
-            </section>
+  <div className="cv-tech-table-wrapper" role="region" aria-label="Tableau des compétences techniques">
+    <table className="cv-tech-table">
 
-            <section className="cv-experience">
-              <h2 className="cv-section-title">Parcours professionnel</h2>
+      <tbody>
+        <tr>
+          <th scope="row">Frontend</th>
+          <td>
+            <ul className="cv-skill-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Responsive design</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Hooks</li>
+              <li>Context API</li>
+            </ul>
+          </td>
+        </tr>
 
-              <article>
-                <h3 className="cv-sub-title">2006 – 2019 • Freelance artistique</h3>
-                <p>Peinture, design visuel, illustration</p>
+        <tr>
+          <th scope="row">Backend</th>
+          <td>
+            <ul className="cv-skill-list">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MySQL</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">APIs &amp; Données</th>
+          <td>
+            <ul className="cv-skill-list">
+              <li>API REST</li>
+              <li>Web services REST</li>
+              <li>JSON</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Design &amp; Maquettage</th>
+          <td>
+            <ul className="cv-skill-list">
+              <li>UI/UX design</li>
+              <li>Wireframes</li>
+              <li>Web design</li>
+              <li>Figma</li>
+              <li>Adobe Suite</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">Outils &amp; Méthodes</th>
+          <td>
+            <ul className="cv-skill-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Méthodes Agiles</li>
+              <li>Scrum</li>
+              <li>Trello</li>
+              <li>Vercel</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section className="cv-projects" aria-labelledby="cv-projects-title">
+    <h2 id="cv-projects-title" className="cv-section-title">
+      Projets réalisés
+    </h2>
+    <p>
+      Développement de projets individuels (solo rush) et collaboratifs, allant de pages
+      HTML/CSS simples à des applications web complètes en React. Intégration d’APIs externes,
+      développement d’interfaces dynamiques, gestion d’état, organisation du code, mise en place
+      d’algorithmes simples, maquettes Figma et collaboration en équipe selon les méthodes agiles.
+    </p>
+  </section>
+
+
+  <section className="cv-experience">
+    <h2 className="cv-section-title">EXPÉRIENCES PROFESSIONNELLES <br/> (IT et TRANSVERSALES)</h2>
+
+      <article>
+        <h3 className="cv-sub-title">2006 – 2019 • Freelance artistique</h3>
+          <p>Peinture, design visuel, illustration</p>
 
                 <h3 className="cv-sub-title">2019 – 2025 • Expérience polyvalente hors domaine IT</h3>
                 <p>Grande distribution et restauration rapide.</p>
@@ -198,22 +264,15 @@ export default function CvPage() {
               <h2 className="cv-section-title">Compétences professionnelles</h2>
 
               <ul className="cv-skills-list">
-                <li>Autonomie (autonomy)</li>
-                <li>Curiosité technique (technical curiosity)</li>
-                <li>Esprit d’équipe (team spirit)</li>
-                <li>Capacité d’apprentissage rapide (quick learning)</li>
-                <li>Adaptabilité (adaptability)</li>
-                <li>Collaboration</li>                
-                <li>Résolution de problèmes (problem solving)</li>
-                <li>Créativité (creativity)</li>                
+                <li>Autonomie</li>
+                <li>Curiosité technique</li>
+                <li>Esprit d’équipe</li>
+                <li>Analyse des besoins (UX)</li>
+                <li>Rigueur opérationnelle</li>  
+                <li>Créativité UX/UI</li>                           
+                <li>Orientation résultats</li>                
               </ul>
-
-              <h3 className="cv-sub-title">Autres soft skills</h3>
-              <p>
-                Réactivité, rigueur opérationnelle, résistance à la pression, discipline, ponctualité, endurance,
-                sens du service, sens commercial, écoute, analyse des besoins, flexibilité, orientation résultats,
-                apprentissage permanent.
-              </p>
+             
             </section>
           </section>
         </div>
