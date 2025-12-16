@@ -264,12 +264,12 @@ export default function CvPage() {
               <h2 className="cv-section-title">Compétences professionnelles</h2>
 
               <ul className="cv-skills-list">
-                <li>Autonomie</li>
-                <li>Curiosité technique</li>
-                <li>Esprit d’équipe</li>
-                <li>Analyse des besoins (UX)</li>
-                <li>Rigueur opérationnelle</li>  
-                <li>Créativité UX/UI</li>                           
+                <li>Autonomie,</li>
+                <li>Curiosité technique,</li>
+                <li>Esprit d’équipe,</li>
+                <li>Analyse des besoins (UX),</li>
+                <li>Rigueur opérationnelle,</li>  
+                <li>Créativité UX/UI,</li>                           
                 <li>Orientation résultats</li>                
               </ul>
              
