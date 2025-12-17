@@ -527,6 +527,11 @@
   padding-top: 1mm;  
     font-size: 10pt !important;
     line-height: 10pt !important;
+    order: 1 !important;
+  }
+
+    .cv-skills {
+    order: 2 !important;
   }
 
   .cv-content {
