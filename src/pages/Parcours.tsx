@@ -6,7 +6,7 @@ function Parcours() {
       <header className="parcours-header">
         <h1 className="parcours-title">Parcours</h1>
         <p className="parcours-intro">
-          développeuse front-end en reconversion, à l’interface entre création,
+          Développeuse front-end en reconversion, à l’interface entre création,
           technologie et expérience utilisateur.
         </p>
       </header>

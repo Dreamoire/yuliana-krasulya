@@ -292,9 +292,18 @@
   width: 30%;
   font-weight: 700;
   color: var(--cv-color-header-bg);   
+   position: relative;
+  padding-left: 1.4rem; 
 }
 
-
+.cv-tech-table th[scope="row"]::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  color: var(--cv-color-accent); 
+  font-weight: 700;
+}
 .cv-skill-list {
   margin: 0;
   padding: 0;
@@ -320,6 +329,10 @@
 @media (max-width: 900px) {
   .cv-page__wrapper {
     padding: 0 0.75rem;
+  }
+
+  .cv-skills {
+    order: 1;
   }
 
   .cv-header {
@@ -367,7 +380,9 @@
 
   .cv-sidebar {
     padding: 1.5rem 1rem;
-    border-right: 0.6px solid var(--border-light); 
+      order: 2;
+    border-right: 0; 
+    border-top: 0.6px solid var(--border-light);
   }
 
   .cv-content {
