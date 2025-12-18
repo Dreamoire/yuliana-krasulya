@@ -283,7 +283,7 @@
 .cv-tech-table th,
 .cv-tech-table td {
   padding: 0.6rem 0.8rem;
-  vertical-align: top;
+  vertical-align: middle;
   text-align: left;
   border-bottom: 0.6px solid rgb(92 96 104 / 0.22);
 }
@@ -299,8 +299,7 @@
 .cv-tech-table th[scope="row"]::before {
   content: "›";
   position: absolute;
-  left: 0;
-  top: 20%;
+  left: 0;  
   color: var(--cv-color-accent); 
   font-weight: 700;
 }
@@ -325,6 +324,7 @@
   padding-left: 0.3rem;
   padding-right: 0.3rem;
 }
+
 
 @media (max-width: 900px) {
   .cv-page__wrapper {
@@ -382,7 +382,7 @@
     padding: 1.5rem 1rem;
       order: 2;
     border-right: 0; 
-    border-top: 0.6px solid var(--border-light);
+   
   }
 
   .cv-content {
@@ -527,7 +527,8 @@
   padding-top: 1mm;  
     font-size: 10pt !important;
     line-height: 10pt !important;
-    order: 1 !important;
+    border-right: 0.6px solid var(--border-light); 
+    border-bottom: 0 !important;
   }
 
     .cv-skills {
