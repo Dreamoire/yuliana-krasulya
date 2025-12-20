@@ -92,17 +92,6 @@ export default function CvPage() {
             </p>
           </section>
         </header>
-        <div className="skills-mention"> 
-          HTML, HTML5, CSS, CSS3, Responsive design, JavaScript, 
-          JavaScript ES6, TypeScript, React, React Hooks, Context API, 
-          Gestion d’état, Développement Frontend, Node.js, Express.js, 
-          Développement Backend, API REST, Web services REST, JSON, Consommation d’API, 
-          MySQL, Bases de données relationnelles, UI design, UX design, UI/UX, 
-          Wireframes, Web design, Figma, Adobe Suite, Intégration web, Git, GitHub, 
-          Contrôle de version, Méthodes agiles, Agile, Scrum, Trello, Vercel, 
-          Déploiement web, Développement web, Applications web, Travail en équipe technique,
-          Développement web, Développement Frontend, Développement Full Stack
-        </div>
         <div className="cv-layout">
           <aside className="cv-sidebar">
             <section className="cv-education">

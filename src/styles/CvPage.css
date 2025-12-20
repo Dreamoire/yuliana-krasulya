@@ -107,11 +107,6 @@
   font-weight: 400;
 }
 
-.skills-mention {
-  font-size: 0.5rem;
-  color: #fff;
-}
-
 .cv-contact {
   grid-area: contact;
   font-size: 0.95rem;
@@ -192,7 +187,7 @@
   display: grid;
   grid-template-columns: 420px minmax(0, 1fr);
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin: 1rem 0;
 }
 
 .cv-sidebar {
@@ -379,7 +374,7 @@
   }
 
   .cv-sidebar {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.2rem;
       order: 2;
     border-right: 0; 
    
@@ -387,7 +382,7 @@
 
   .cv-content {
     margin: 0;
-    padding: 1.5rem 1.25rem;
+    padding: 1.5rem 1rem;
     max-width: 100%;
     width: 100%;
   }
@@ -414,12 +409,6 @@
     padding-top: 0 !important;
   }
 
-  .skills-mention {
-  font-size: 3pt;
-  color: #fff;
-  padding: 0;
-  margin: 0;
-}
 
   .cv-page__wrapper {
     max-width: none !important;
@@ -518,7 +507,7 @@
     display: grid !important;
     grid-template-columns: 27% 73% !important;
     column-gap: 5mm !important;
-    margin: 0 !important;
+     margin: 1rem 0;
   }
 
   .cv-sidebar {
