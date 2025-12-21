@@ -85,13 +85,13 @@
 }
 
 .cv-header__titles {
-  text-align: left;
+  text-align: center;
   font-family: var(--cv-font-title);
 }
 
 .cv-title {
   margin: 0;
-  font-size: 2.8rem;
+  font-size: clamp(1.6rem, 3vw + 0.4rem, 2.8rem);
   font-weight: 700;
   line-height: 1.05;
   color: var(--cv-color-accent);
@@ -99,12 +99,13 @@
 }
 
 .cv-job {
-  margin: 0.5rem 0 0;
-  font-size: 1.1rem;
+  margin: 0.3rem 0 0;
+  font-size:  clamp(1rem, 1.1vw, 1.2rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cv-color-header-text);
   font-weight: 400;
+  text-align: center;
 }
 
 .cv-contact {
@@ -134,58 +135,44 @@
 .cv-download-btn {
   margin-top: 0.9rem;
   border-radius: 10px;
-  background-color: var(--cv-color-accent);
-  color: var(--cv-color-header-text);
-  font-weight: 600;
-  border: 1px solid var(--cv-color-accent);
-  padding: 0.5rem 1.1rem;
+  background-color: var(--vert-accent);
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid var(--vert-accent);
+  padding: 0.55rem 1.1rem;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
   cursor: pointer;
+  text-shadow:
+    0 1px 0 rgb(13 13 15 / 0.35),
+    0 0 2px rgb(13 13 15 / 0.25);  
 }
 
 .cv-contact__photo {
-  width: 230px;
-  height: 230px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   padding: 2px;
-  background: linear-gradient(to top, var(--cv-color-line), var(--cv-color-accent));
-  
+  background: linear-gradient(to top, var(--cv-color-line), var(--cv-color-accent));  
 }
 
 .cv-profile {
   grid-area: profile;
   font-size: 0.95rem;
-  line-height: 1.55;
-  padding: 0 2rem;
+  max-width: 65ch;  
+  padding: 0;
   position: relative;
 }
 
-.cv-profile::before {
-  content: "";
-  position: absolute;
-  top: -1rem;
-  left: 0;
-  width: 2px;
-  height: 90%;
-  background: linear-gradient(to bottom, rgb(230 57 70 / 0.7), rgb(230 57 70 / 0));
-}
-
-.cv-profile::after {
-  content: "";
-  position: absolute;
-  top: -1rem;
-  left: 0;
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(to right, rgb(230 57 70 / 0.7), rgb(230 57 70 / 0));
+.cv-profile p {
+line-height: 1.7;
 }
 
 .cv-layout {
   display: grid;
-  grid-template-columns: 420px minmax(0, 1fr);
+  grid-template-columns: 380px minmax(0, 1fr);
   gap: 2rem;
   margin: 1rem 0;
 }
@@ -196,7 +183,6 @@
   font-size: 0.95rem;
   border-right: 0.6px solid var(--border-light); 
 }
-
 
 .cv-content {
   font-size: 0.98rem;
@@ -323,11 +309,13 @@
 
 @media (max-width: 900px) {
   .cv-page__wrapper {
-    padding: 0 0.75rem;
+    padding: 0.3 1.5rem;
   }
 
   .cv-skills {
     order: 1;
+    padding: 0 1.5rem;
+    max-width: 90ch;
   }
 
   .cv-header {
@@ -344,40 +332,37 @@
     width: 50px;
     height: 50px;
     margin: 0 auto 0.75rem;
+     align-items: center;
   }
 
   .cv-title {
-    font-size: 1.8rem;
+    font-size: clamp(1.1rem, 1.6vw + 0.7rem, 1.6rem);
     line-height: 1.15;
   }
 
   .cv-job {
-    font-size: 1.05rem;
+    font-size: clamp(0.9rem, 0.3vw + 0.85rem, 1rem);
     margin-top: 0.25rem;
+    max-width: 70ch;
   }
 
   .cv-profile {
     padding: 0;
     text-align: left;
-    max-width: 58ch;
+    max-width: 75ch;
   }
-
-  .cv-profile::before,
-  .cv-profile::after {
-    display: none;
-  }
-
+ 
   .cv-layout {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 1rem;
   }
 
   .cv-sidebar {
-    padding: 1.5rem 1.2rem;
+    padding: 0 1.5rem;
       order: 2;
     border-right: 0; 
-   
+    max-width: 70ch;   
   }
 
   .cv-content {
@@ -391,7 +376,7 @@
 
 @media print {
   @page {
-    margin:3mm;
+    margin: 0;
   }
  
   .cv-download-btn {
@@ -420,17 +405,19 @@
   .cv-header {
     background-color: #f3f5f7 !important;
     color: #0f0f0f !important;
-
     margin-top: 0 !important;
-    padding: 2mm 5mm 2mm !important;
-
+    padding: 3mm 7mm 3mm !important;
     display: grid !important;
-    grid-template-columns: 25% 75% !important;
+    grid-template-columns: 30% 70% !important;
     grid-template-areas:
       "contact top"
       "contact profile" !important;
-    column-gap: 8mm !important;
+    column-gap: 5mm !important;
     row-gap: 3mm !important;
+  }
+  
+  .nav {
+    display: none !important;
   }
 
   .cv-title {
@@ -451,13 +438,13 @@
   .cv-contact {
     grid-area: contact !important;
     padding-left: 0 !important;
-    text-align: left !important;
+    text-align: center !important;
+     align-items: center;
   }
 
   .cv-contact p,
   .cv-contact a {
-    color: #0f0f0f !important;
-    text-align: left !important;
+    color: #0f0f0f !important;    
     font-size: 9pt !important;
     line-height: 10pt !important;
   }
@@ -469,8 +456,8 @@
   }
 
   .cv-contact__photo {
-    width: 80px !important;
-    height: 80px !important;
+    width: 100px !important;
+    height: 100px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
     margin: 0 0 1mm 0 !important;
@@ -492,22 +479,16 @@
     position: static !important;
   }
 
-  .cv-profile::before,
-  .cv-profile::after {
-    content: none !important;
-    display: none !important;
-  }
-
   .cv-profile p {
     margin: 0 0 1.2mm 0 !important;
-    max-width: 65ch !important;
+    max-width: 60ch !important;
   }
 
   .cv-layout {
     display: grid !important;
     grid-template-columns: 27% 73% !important;
-    column-gap: 5mm !important;
-     margin: 1rem 0;
+    column-gap: 2mm !important;
+     margin: 2mm 0;
   }
 
   .cv-sidebar {
@@ -527,7 +508,7 @@
   .cv-content {
     background-color: #fff !important;
     margin: 0 !important;
-    padding: 6mm 0 !important;
+    padding: 2mm 0 !important;
     max-width: 70ch !important;
     font-size: 9pt !important;
   }

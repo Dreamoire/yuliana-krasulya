@@ -14,7 +14,7 @@ export default function CvPage() {
           <div className="cv-header__top">
             <section className="cv-header__titles">
               <h1 className="cv-title">Yuliana Krasulya</h1>
-              <h2 className="cv-job"> DÉVELOPPEUR WEB FULL STACK JUNIOR – ALTERNANCE (React / Node.js) </h2>
+              <h2 className="cv-job"> DÉVELOPPEUR WEB FULL STACK – ALTERNANCE (React / Node.js) </h2>
             </section>
           </div>
 
@@ -72,22 +72,23 @@ export default function CvPage() {
                 type="button"
                 onClick={handlePrint}
               >
-                Télécharger le CV en PDF
+                CV en PDF
               </button>
             </div>
           </address>
 
           <section className="cv-profile">
             <p>
-              Développeur Web Full Stack junior en reconversion, 
-              issue du design graphique et de l’UI/UX, actuellement en formation 
-              à la Wild Code School.
-              Spécialisée en React, JavaScript et Node.js, avec une forte sensibilité 
-              UX et une rigueur opérationnelle acquise en environnement professionnel exigeant.
+             Développeuse Web Full Stack en reconversion, issue du design graphique 
+             et de l’UI/UX, en formation à la Wild Code School.
+            Je me forme activement en React, JavaScript et Node.js, et j’inscris 
+            l’accessibilité numérique comme un objectif prioritaire de ma pratique, 
+            sans compromis sur la qualité ni sur la compréhension des usages réels.
               <br/>
-              Objectif : intégrer une entreprise en alternance 
-              (CDA – Titre RNCP niveau 6) à partir de mars 2026, dans une équipe 
-              agile orientée qualité et collaboration.
+             Objectif : alternance CDA (RNCP 6) à partir de mars 2026, au sein d’une 
+             équipe agile orientée qualité et collaboration.
+              <br />
+              Bénéficiaire de la RQTH (sans nécessité d’accompagnement ou d’aménagement).
 
             </p>
           </section>
@@ -117,11 +118,11 @@ export default function CvPage() {
               </article>
 
               <article>
-                <h3 className="cv-sub-title">1990 – 1994 • Beaux-Arts – Krasnodar</h3>
+                <h3 className="cv-sub-title">1990 – 1994 • Beaux-Arts – Russie</h3>
               </article>
 
               <article>
-                <h3 className="cv-sub-title">2000 • Formation Adobe Suite – Moscou</h3>
+                <h3 className="cv-sub-title">2000 • Formation Adobe Suite – Russie</h3>
               </article>
             </section>
 
