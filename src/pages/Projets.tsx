@@ -1,10 +1,13 @@
+import type { JSX } from "react";
+
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { projects } from "../data/projects";
+
 import "../styles/Projets.css";
 
-function Projets() {
+export default function Projets(): JSX.Element {
   const location = useLocation();
 
   useEffect(() => {
@@ -26,11 +29,29 @@ function Projets() {
         </p>
 
         <nav className="projets-page__toc" aria-label="Aller à un projet">
-          {projects.map((p) => (
-            <a key={p.id} className="projets-page__toc-link" href={`#${p.slug}`}>
-              {p.title}
-            </a>
-          ))}
+          {projects.map((p) => {
+            const articlePath = p.articleSlug
+              ? `/articles/${p.articleSlug}`
+              : undefined;
+
+            return articlePath ? (
+              <Link
+                key={p.id}
+                className="projets-page__toc-link"
+                to={articlePath}
+              >
+                {p.title}
+              </Link>
+            ) : (
+              <a
+                key={p.id}
+                className="projets-page__toc-link"
+                href={`#${p.slug}`}
+              >
+                {p.title}
+              </a>
+            );
+          })}
         </nav>
       </header>
 
@@ -39,10 +60,23 @@ function Projets() {
           const hasRepo = Boolean(p.repoUrl);
           const hasLive = Boolean(p.liveUrl);
 
+          const articlePath = p.articleSlug
+            ? `/articles/${p.articleSlug}`
+            : undefined;
+
           return (
             <article key={p.id} className="projet" id={p.slug}>
               <div className="projet__content">
-                <h2 className="projet__title">{p.title}</h2>
+                <h2 className="projet__title">
+                  {articlePath ? (
+                    <Link to={articlePath} className="projet__titleLink">
+                      {p.title}
+                    </Link>
+                  ) : (
+                    p.title
+                  )}
+                </h2>
+
                 <p className="projet__desc">{p.shortDescription}</p>
 
                 <div className="projet__links" aria-label="Liens du projet">
@@ -77,12 +111,23 @@ function Projets() {
               </div>
 
               <div className="projet__media" aria-label={`Aperçu ${p.title}`}>
-                <img
-                  className="projet__image"
-                  src={p.imageSrc}
-                  alt={`Aperçu du projet ${p.title}`}
-                  loading="lazy"
-                />
+                {articlePath ? (
+                  <Link to={articlePath} className="projet__imageLink">
+                    <img
+                      className="projet__image"
+                      src={p.imageSrc}
+                      alt={`Aperçu du projet ${p.title}`}
+                      loading="lazy"
+                    />
+                  </Link>
+                ) : (
+                  <img
+                    className="projet__image"
+                    src={p.imageSrc}
+                    alt={`Aperçu du projet ${p.title}`}
+                    loading="lazy"
+                  />
+                )}
               </div>
             </article>
           );
@@ -91,5 +136,3 @@ function Projets() {
     </main>
   );
 }
-
-export default Projets;

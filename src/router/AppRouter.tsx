@@ -23,6 +23,7 @@ function AppRouter() {
         <Route path="/articles/:slug" element={<ArticlePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/cv" element={<CvPage />} />
+        <Route path="/articles/:slug" element={<ArticlePage />} />
       </Routes>
 
       <ButtonUp />

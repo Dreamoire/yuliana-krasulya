@@ -25,5 +25,4 @@ export const searchIndex: SearchItem[] = [
     keywords: ["react", "projet", "portfolio"],
   },
 
-  // … когда создашь реальные проекты и статьи — добавим их сюда
 ];

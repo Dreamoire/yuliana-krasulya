@@ -5,7 +5,6 @@ date: "2025-12-22"
 intro: "Nous entrons dans la période de Yule, celle du solstice d’hiver. Un moment paradoxal : la nuit la plus longue, et pourtant le point exact où la lumière commence à revenir. Un temps suspendu, propice aux bilans, aux renaissances et aux nouveaux élans. "
 cover: "./cover.jpg"
 ---
-suspendu, propice aux bilans, aux renaissances et aux nouveaux élans.
 Fin d’un cycle, mort apparente du Soleil, renaissance, espoir, recommencement.
 Qu’on l’appelle Yule, solstice d’hiver ou autrement, ce moment porte une symbolique universelle: celle d’un passage, d’un temps suspendu, d’un instant «entre deux». Comme un saut au-dessus d’un vide. Une traversée après l’obscurité. La résilience à l’état pur: la vie continue, même dans le froid. Les promesses tiennent. Les rêves trouvent leur chemin.
 

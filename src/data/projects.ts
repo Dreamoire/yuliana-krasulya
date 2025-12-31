@@ -3,6 +3,7 @@ import projetCard1 from "../assets/images/vostok-express.jpg";
 import projetCard2 from "../assets/images/herbier-de-claire.jpg";
 import projetCard3 from "../assets/images/chromosphere.jpg";
 import projetCard4 from "../assets/images/time-to-eat.jpg";
+import projetCard5 from "../assets/images/ts-epic-battle.jpg";
 
 export interface Project {
   id: string;
@@ -10,11 +11,22 @@ export interface Project {
   shortDescription: string;
   imageSrc: string;
   slug: string;
+  articleSlug?: string;
   repoUrl?: string;
   liveUrl?: string;
 }
 
 export const projects: Project[] = [
+  {
+  id: "proj-5",
+  title: "TS Epic Battle",
+  shortDescription: "Projet de jeu en canvas avec React et TypeScript",
+  imageSrc: projetCard5,
+  slug: "ts-epic-battle",
+   articleSlug: "31-12-2025-epic-battle",
+  repoUrl: "https://github.com/Dreamoire/ts-epic-battle",
+  liveUrl: "https://ts-epic-battle.vercel.app/",
+},
     {
     id: "proj-4",
     title: "No Time To Eat",
