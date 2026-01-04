@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import ButtonUp from "../components/ButtonUp";
+
 import ArticlesPage from "../pages/ArticlesPage";
 import ArticlePage from "../pages/ArticlePage";
 import Parcours from "../pages/Parcours";
@@ -8,7 +11,6 @@ import Projets from "../pages/Projets";
 import ContactPage from "../pages/ContactPage";
 import CvPage from "../pages/CvPage";
 import Home from "../pages/Home";
-import ButtonUp from "../components/ButtonUp";
 
 function AppRouter() {
   return (
@@ -23,9 +25,9 @@ function AppRouter() {
         <Route path="/articles/:slug" element={<ArticlePage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/cv" element={<CvPage />} />
-        <Route path="/articles/:slug" element={<ArticlePage />} />
       </Routes>
 
+      <Footer />
       <ButtonUp />
     </>
   );
