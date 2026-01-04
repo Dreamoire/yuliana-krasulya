@@ -1,0 +1,67 @@
+.graphic-lab-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+.graphic-lab-controls {
+  display: grid;
+  gap: 14px;
+}
+
+.graphic-lab-control {
+  display: grid;
+  gap: 8px;
+}
+
+.graphic-lab-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.graphic-lab-button {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: white;
+  cursor: pointer;
+}
+
+.graphic-lab-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.graphic-lab-button-secondary {
+  background: transparent;
+}
+
+.graphic-lab-preview {
+  display: grid;
+  gap: 10px;
+}
+
+.graphic-lab-canvas {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: white;
+}
+
+.graphic-lab-canvas-hidden {
+  display: none;
+}
+
+.graphic-lab-error {
+  color: #b00020;
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  .graphic-lab-grid {
+    grid-template-columns: 360px 1fr;
+    align-items: start;
+  }
+}

@@ -30,11 +30,10 @@ function Home() {
         <h2 className="section-title">Projets</h2>
         <ProjectCarousel />
       </section>
-
-      <section className="section home-section">
-        <h2 className="section-title">Derniers articles</h2>
-        <ArticlePreviewCard />
-      </section>
+        <section className="section home-section">
+          <h2 className="section-title">Derniers articles</h2>
+          <ArticlePreviewCard />
+        </section>
 
       <section className="section home-section">
         <h2 className="section-title">Créations visuelles</h2>
