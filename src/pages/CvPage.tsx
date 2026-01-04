@@ -18,6 +18,8 @@ const styles = `
   font-family:Arial, Helvetica, sans-serif;
   font-size:12px;
   line-height:1.45;
+
+  padding: 24px 0;
 }
 
 .cv *{box-sizing:border-box}
