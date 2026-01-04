@@ -1,7 +1,6 @@
 import GraphicsCarousel from "../components/GraphicsCarousel";
 import ArticlePreviewCard from "../components/ArticlePreviewCard";
 import ProjectCarousel from "../components/ProjectCarousel";
-import Footer from "../components/Footer";
 
 import yuyuPhoto from "../assets/images/yuyu.jpg";
 import "../styles/Home.css";
@@ -53,7 +52,7 @@ function Home() {
         </section>
       </main>
 
-      <Footer />
+   
     </>
   );
 }
