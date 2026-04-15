@@ -1,3 +1,4 @@
+/* ==================== BASE ==================== */
 .cv {
   --bg: #f2f2f2;
   --paper: #ffffff;
@@ -7,6 +8,8 @@
   --black: #000000;
   --charcoal: #0b0b0c;
   --orange: #ff7900;
+  --dark-orange: #f16e00;
+  --violet: #44238b;
 
   background: var(--bg);
   color: var(--ink);
@@ -21,6 +24,14 @@
   box-sizing: border-box;
 }
 
+/* ── Global paragraph spacing ── */
+.cv p + p,
+.cv .introText + p,
+.cv .projets p + p,
+.cv .split p {
+  margin-top: 6px;
+}
+
 .cv .page {
   width: min(100%, 62rem);
   margin: 0 auto;
@@ -29,6 +40,7 @@
   overflow: hidden;
 }
 
+/* ==================== LAYOUT — responsive ==================== */
 .cv .layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -36,8 +48,8 @@
 
 @media (min-width: 56.25rem) {
   .cv .layout {
-    grid-template-columns: clamp(18rem, 28vw, 24rem) minmax(0, 1fr);
-    grid-template-rows: auto auto;
+    grid-template-columns: clamp(16rem, 26vw, 20rem) minmax(0, 1fr);
+    grid-template-rows: 1fr;
     align-items: stretch;
   }
 
@@ -48,17 +60,15 @@
 
   .cv section[aria-label="Contenu principal"] {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1;
   }
 
   .cv .secondary {
-    grid-column: 1;
-    grid-row: 2;
+    display: none;
   }
 }
 
-
-@media (max-width: 56.25rem) {
+@media (max-width: 56.24rem) {
   .cv .layout {
     display: flex;
     flex-direction: column;
@@ -73,147 +83,129 @@
   }
 
   .cv .secondary {
-    order: 3;
+    display: none;
   }
-    .cv .aside-block.contact {
-    max-width: 22rem;       
-    margin-inline: auto;    
-    text-align: left;        
+
+  .cv .aside-block.contact {
+    max-width: 22rem;
+    margin-inline: auto;
+    text-align: left;
   }
 }
 
-
-
-.cv aside,
-.cv .secondary {
+/* ==================== SIDEBAR ==================== */
+.cv aside {
   background: linear-gradient(180deg, var(--charcoal), var(--black));
-  color: #fff;
+  color: #ffffff;
   padding: clamp(1.25rem, 3vw, 2.25rem);
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 2.2vw, 1.75rem);
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  height: 100%;
 }
 
+.cv aside p {
+  margin: 0;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.cv aside a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.cv aside a:hover {
+  border-bottom-color: rgba(255, 121, 0, 0.8);
+}
 
 .cv .id {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: clamp(0.75rem, 2vw, 1.25rem);
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .cv img {
-  width: clamp(3.25rem, 9vw, 4.25rem);
-  height: clamp(3.25rem, 9vw, 4.25rem);
-  border-radius: 999px;
+  width: clamp(3.25rem, 9vw, 5rem);
+  height: clamp(3.25rem, 9vw, 5rem);
+  border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgb(255 255 255 / 0.25);
+  border: 3px solid rgba(255, 255, 255, 0.25);
   display: block;
-}
-
-@media (max-width: 40rem) {
-  .cv img {
-    width: 3.25rem;
-    height: 3.25rem;
-  }
-}
-
-
-.cv h1 {
-  margin: 0;
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  font-weight: 800;
-  line-height: 1.05;
-  color: var(--orange);
-}
-
-.cv h2 {
-  margin: 0 0 0.45rem;
-  font-size: clamp(1.1rem, 2.2vw, 1.25rem);
-  font-weight: 800;
-  color: var(--orange);
-}
-
-.cv .role {
-  margin: 0.45rem 0 0;
-  font-weight: 700;
-  color: rgb(255 255 255 / 0.9);
-  letter-spacing: 0.01em;
+  margin: 0.5rem auto 0;
 }
 
 .cv .line {
-  height: 0.125rem;
-  width: 100%;
-  background: var(--orange);
+  height: 2px;
+  background: var(--line);
+  margin: 5px 0;
 }
 
-
-.cv aside p,
-.cv .secondary p {
-  margin: 0;
-  color: rgb(255 255 255 / 0.88);
+/* ── Sidebar headings ── */
+.cv aside h2,
+.cv aside .id-name {
+  color: var(--orange);
+  text-transform: uppercase;
+  margin: 0 0 0.45rem;
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  font-weight: 700;
 }
 
-.cv aside a,
-.cv .secondary a {
-  color: rgb(255 255 255 / 0.92);
-  text-decoration: none;
-  border-bottom: 1px solid rgb(255 255 255 / 0.25);
-}
-
-.cv aside a:hover,
-.cv .secondary a:hover {
-  border-bottom-color: rgb(255 121 0 / 0.8);
-}
-
-.cv ul {
-  margin: 0;
-  padding: 0;
+/* ── Parcours pro ── */
+.cv .split {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.cv .split li + li {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.cv .split strong {
+  display: block;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.25;
+}
+
+/* ── Dots lists (langues, intérêts) ── */
+.cv .dots {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .cv .dots li {
-  padding-left: 0.8rem;
   position: relative;
-  color: rgb(255 255 255 / 0.88);
-}
-
-.cv .dots li + li {
-  margin-top: 0.35rem;
+  padding-left: 1.2em;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .cv .dots li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--orange);
-  font-weight: 800;
+  color: var(--line);
+  font-weight: 900;
+  font-size: 1.3em;
 }
 
-.cv .split li + li {
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgb(255 255 255 / 0.12);
-}
-
-.cv .split strong {
-  display: block;
-  color: rgb(255 255 255 / 0.95);
-  font-weight: 800;
-  line-height: 1.25;
-}
-
-.cv .small {
-  color: rgb(255 255 255 / 0.82);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
+/* ── PDF button ── */
 .cv .pdfBtn {
   display: inline-block;
   margin-top: 0.65rem;
   padding: 0.55rem 0.85rem;
-  border: 1px solid rgb(255 121 0 / 0.55);
+  border: 1px solid rgba(255, 121, 0, 0.55);
   color: #fff;
   text-decoration: none;
   font-weight: 800;
@@ -221,15 +213,50 @@
 }
 
 .cv .pdfBtn:hover {
-  background: rgb(255 121 0 / 0.15);
+  background: rgba(255, 121, 0, 0.15);
 }
 
+/* ==================== TYPOGRAPHY ==================== */
+.cv h1 {
+  margin: 0 0 8px 0;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--dark-orange);
+}
+
+.cv .role {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--violet);
+}
+
+.cv h2 {
+  margin: 5px 0 8px 0;
+  font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+  font-weight: 700;
+  color: var(--dark-orange);
+  text-transform: uppercase;
+}
+
+.cv ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 3px;
+}
+
+/* ==================== MAIN CONTENT ==================== */
 .cv section[aria-label="Contenu principal"] {
   background: var(--paper);
   padding: clamp(1.25rem, 3vw, 2.25rem);
   display: flex;
   flex-direction: column;
-  gap: clamp(1.1rem, 2.2vw, 1.85rem);
+  gap: clamp(0.8rem, 1.8vw, 1.25rem);
 }
 
 .cv section[aria-label="Contenu principal"] p {
@@ -239,22 +266,23 @@
   line-height: 1.6;
 }
 
-.cv .intro {
+/* ── Profil ── */
+.cv .cv-profil {
   position: relative;
   padding-left: clamp(0.8rem, 1.4vw, 1rem);
 }
 
-.cv .intro::before {
+.cv .cv-profil::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0.15rem;
   bottom: 0.15rem;
   width: 0.25rem;
-  background: var(--orange);
+  background: var(--line);
 }
 
-.cv .intro h2 {
+.cv .cv-profil h2 {
   margin: 0 0 0.5rem;
 }
 
@@ -262,170 +290,385 @@
   color: var(--ink);
 }
 
-.cv .block {
-  border: 2px solid var(--line);
-  padding: 0.95rem 1.05rem;
-  background: #fff;
-}
-
-.cv .two {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.cv .intro {
-  display: block;            
-  position: relative;
-  padding-left: clamp(0.8rem, 1.4vw, 1rem);
-  padding-top: 0;            
-  gap: 0;                    
-  align-items: initial;
-}
-
-.cv .intro::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.15rem;
-  bottom: 0.15rem;
-  width: 0.25rem;
-  background: var(--orange);
-}
-
-.cv .intro h2 {
-  margin: 0 0 0.5rem;
-}
-
-.cv .introText {
-  margin: 0;
-  color: var(--ink);
-  line-height: 1.6;
-}
-
-.cv .pro-skills ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.cv .pro-skills li {
-  position: relative;
-  padding-left: 0.85rem;
-  font-size: 1rem;
+.cv .cv-profil p {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
   line-height: 1.45;
   color: var(--text);
 }
 
-.cv .pro-skills li + li {
-  margin-top: 0.4rem;
+.cv .cv-profil p:last-child {
+  margin-bottom: 0;
 }
 
-.cv .pro-skills li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--orange);
-  font-weight: 800;
-}
-
-.cv .skills-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-  font-size: 0.95rem;
-}
-
-.cv .skills-table th,
-.cv .skills-table td {
+/* ── Blocks ── */
+.cv .block {
   border: 1px solid var(--line);
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+
+/* ==================== SKILLS (div-based, not table) ==================== */
+.cv .skills-table {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.cv .skills-col {
+  padding: 4px 8px;
   vertical-align: top;
-  padding: 0.7rem;
+  line-height: 1.3;
+  flex: 1 1 auto;
 }
 
-.cv .skills-table th {
-  text-align: left;
-  font-weight: 800;
-  color: var(--ink);
+/* ── Shared highlight style for inline h3 labels ── */
+.cv .skills-col h3,
+.cv .education-item h3,
+.cv .pro-skills h3 {
+  display: inline;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--violet);
+  padding: 0 2px;
+  margin-right: 8px;
+  margin-bottom: -1px;
+  line-height: 1.4;
 }
 
-.cv .skills-table td ul {
+.cv .skills-col p {
+  display: inline;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ==================== TWO COLUMNS (soft skills + projets) ==================== */
+.cv .two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 56.24rem) {
+  .cv .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Soft skills ── */
+.cv .pro-skills {
+  border: 1px solid var(--line);
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+
+.cv .pro-skills li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+/* ── Projets ── */
+.cv .projets {
+  border: 1px solid var(--line);
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+
+/* ==================== FORMATION ==================== */
+.cv .education-list {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-.cv .skills-table td li {
+.cv .education-item {
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.cv .education-item:last-child {
+  margin-bottom: 0;
+}
+
+.cv .education-item h3,
+.cv .education-item p {
+  display: inline;
   margin: 0;
-  color: var(--text);
-  font-size: 0.95rem;
-  line-height: 1.35;
 }
 
-.cv .skills-table td li + li {
-  margin-top: 0.35rem;
+.cv .education-item p {
+  font-size: 0.9rem;
+  line-height: 1.3;
 }
 
-.cv .rows p + p {
-  margin-top: 0.9rem;
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--line);
-}
 
-.cv .meta {
-  color: var(--ink);
-  font-weight: 800;
-  font-size: 0.95rem;
-}
 
-@media (max-width: 40rem) {
-  .cv .block {
-    padding: 0.85rem;
-  }
-
-  .cv .skills-table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* ===================== PRINT ===================== */
-
+/* ==================== PRINT ==================== */
 @media print {
-  .cv {
-    background: #fff;
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 10px;
     padding: 0;
+    width: 210mm;
+    height: 297mm;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 0.82rem;
+    line-height: 1.32;
   }
 
   .cv .page {
-    width: 8.27in;
-    min-height: 11.69in;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    background: #fff;
     box-shadow: none;
+    overflow: hidden;
   }
 
   .cv .layout {
     display: grid;
-    grid-template-columns: 2.8in 1fr;
-    grid-template-rows: auto auto;
-    min-height: 11.69in;
+    grid-template-columns: 66mm 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100%;
+    min-height: auto;
+    align-items: stretch;
   }
 
+  /* ── SIDEBAR print ── */
   .cv aside {
     grid-column: 1;
-    grid-row: 1;
+    padding: 20px 8px 14px 18px;
+    gap: 8px;
+    height: 100%;
+    overflow: hidden;
   }
 
+  .cv aside,
+  .cv aside p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.32;
+  }
+
+  .cv aside a {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .cv .id {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cv img {
+    width: 62px;
+    height: 62px;
+    border-width: 2px;
+  }
+
+  .cv .line {
+    height: 1px;
+    margin: 5px 0 6px;
+  }
+
+  .cv .split strong {
+    font-size: 0.66rem;
+    line-height: 1.18;
+  }
+
+  .cv .split p {
+    font-size: 0.58rem;
+    line-height: 1.16;
+  }
+
+  .cv .dots {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  .cv .dots li {
+    padding-left: 1em;
+    margin-bottom: 2px;
+    font-size: 0.62rem;
+    line-height: 1.18;
+  }
+
+  .cv .dots li::before {
+    font-size: 0.9em;
+    top: 0;
+  }
+
+  .cv .id-name {
+    margin: 4px 0 0;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── PDF button: hide in print ── */
+  .cv .pdfBtn {
+    display: none;
+  }
+
+  /* ── TYPOGRAPHY print ── */
+  .cv h1 {
+    margin: 0 0 5px 0;
+    font-size: 1.12rem;
+    line-height: 1.15;
+  }
+
+  .cv .role {
+    margin: 0;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+    line-height: 1.18;
+  }
+
+  .cv h2 {
+    margin: 3px 0 5px 0;
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+
+  .cv ul {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  /* ── MAIN CONTENT print ── */
   .cv section[aria-label="Contenu principal"] {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    padding: 20px 20px 14px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  .cv p + p,
+  .cv .introText + p,
+  .cv .projets p + p,
+  .cv .split p {
+    margin-top: 4px;
+  }
+
+  .cv .cv-profil {
+    padding-left: 10px;
+  }
+
+  .cv .block,
+  .cv .pro-skills,
+  .cv .projets {
+    border: 1px solid var(--line);
+    padding: 7px 8px;
+    background: #fff;
+  }
+
+  /* ── Skills print ── */
+  .cv .skills-col {
+    padding: 2px 4px;
+    line-height: 1.1;
+  }
+
+  .cv .skills-col h3,
+  .cv .education-item h3,
+  .cv .pro-skills h3 {
+    display: inline;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0 3px;
+    margin-right: 6px;
+    line-height: 1.2;
+  }
+
+  .cv .skills-col p {
+    display: inline;
+    font-size: 0.62rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  /* ── Soft skills print ── */
+  .cv .pro-skills li {
+    margin-bottom: 4px;
+    font-size: 0.6rem;
+    line-height: 1.2;
+  }
+
+  .cv .pro-skills li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ── Projets print ── */
+  .cv .projets p {
+    font-size: 0.6rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  /* ── Formation print ── */
+  .cv .education-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cv .education-item {
+    margin-bottom: 3px;
+    line-height: 1.2;
+  }
+
+  .cv .education-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .cv .education-item h3,
+  .cv .education-item p {
+    display: inline;
+    margin: 0;
+  }
+
+  .cv .education-item p {
+    font-size: 0.62rem;
+    line-height: 1.2;
+  }
+
+  /* ── Two columns print ── */
+  .cv .two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  /* ── Safety ── */
+  .cv .block,
+  .cv .pro-skills,
+  .cv .projets,
+  .cv aside,
+  .cv section[aria-label="Contenu principal"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .cv .secondary {
-    grid-column: 1;
-    grid-row: 2;
-    padding-top: 0;
+    display: none;
   }
 }

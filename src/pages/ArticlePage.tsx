@@ -35,7 +35,9 @@ export default function ArticlePage(): JSX.Element {
           ) : null}
 
           {article.meta.intro ? (
-            <p className="article__intro">{article.meta.intro}</p>
+            <div className="article__intro">
+              <ReactMarkdown>{article.meta.intro}</ReactMarkdown>
+            </div>
           ) : null}
 
           <div className="article__content">

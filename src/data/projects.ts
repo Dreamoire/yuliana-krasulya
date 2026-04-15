@@ -4,6 +4,7 @@ import projetCard2 from "../assets/images/herbier-de-claire.jpg";
 import projetCard3 from "../assets/images/chromosphere.jpg";
 import projetCard4 from "../assets/images/time-to-eat.jpg";
 import projetCard5 from "../assets/images/ts-epic-battle.jpg";
+import projetCard6 from "../assets/images/ptit-cahier.jpg";
 
 export interface Project {
   id: string;
@@ -17,6 +18,17 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+    id: "proj-6",
+    title: "P'tit Cahier",
+    shortDescription:
+      "Projet de fin de formation DWWM · React 19 · TypeScript · Node.js / Express · MySQL",
+    imageSrc: projetCard6,
+    slug: "ptit-cahier",
+    articleSlug: "14-04-2026-ptit-cahier",
+    repoUrl: "https://github.com/Dreamoire/ptitcahier",
+    liveUrl: "https://ptit-cahier.fr/",
+  },
   {
   id: "proj-5",
   title: "TS Epic Battle",
@@ -49,7 +61,7 @@ export const projects: Project[] = [
   {
     id: "proj-3",
     title: "Chromosphère",
-    shortDescription: "Générateur de palettes en React + API",
+    shortDescription: "Générateur de palettes en React + API. Projet développé en une seule journée",
     imageSrc: projetCard3,
     slug: "chromosphere",
     repoUrl: "https://github.com/Dreamoire/SoloRushReact",

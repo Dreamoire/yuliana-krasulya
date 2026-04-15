@@ -28,7 +28,7 @@
 }
 
 .project-slide {
-  width: auto;
+ width: clamp(280px, 30vw, 380px);
 }
 
 .project-link {

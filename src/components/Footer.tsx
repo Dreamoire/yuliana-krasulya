@@ -46,27 +46,8 @@ export default function Footer() {
                 >
                   GitHub
                 </a>
-              </li>
-              <li>
-                <a
-                  className="footer__link"
-                  href="https://www.instagram.com/juliana_karandache"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  className="footer__link"
-                  href="https://www.tiktok.com/@vostokexpress"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  TikTok
-                </a>
-              </li>
+              </li>         
+
             </ul>
           </nav>
         </div>
