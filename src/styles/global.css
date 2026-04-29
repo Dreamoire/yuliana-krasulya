@@ -201,6 +201,10 @@ a {
     display: none !important;
   }
 
+    footer {
+    display: none;
+  }
+  
   .cv-page {
     padding-top: 0 !important;
   }

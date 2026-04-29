@@ -16,8 +16,7 @@ export default function CvPage() {
                 <img src={photo} alt="Photo de Yuliana Krasulya" />
               </div>
             </div>
-
-            <div className="line" aria-hidden="true" />
+           
 
             <div className="aside-block contact">
               <h2>COORDONNÉES</h2>
@@ -72,13 +71,13 @@ export default function CvPage() {
                 CV en PDF
               </a>
             </div>
-
+           <div className="line" aria-hidden="true" />
             <div>
               <h2>Parcours pro</h2>
               <ul className="split">
                 <li>
                   <strong>
-                    2019 – 2025 • Expérience opérationnelle orientée performance
+                    Expérience opérationnelle orientée performance
                     &amp; expérience utilisateur
                   </strong>
                   <p>
@@ -91,13 +90,40 @@ export default function CvPage() {
 
                 <li>
                   <strong>
-                    2006 – 2019 • Designer graphique et plasticienne — Freelance
+                    Designer graphique et plasticienne — Freelance
                   </strong>
                   <p>
                     Création visuelle, illustration, design éditorial et mise en
                     page pour l'édition. Conception de maquettes, gestion
                     autonome de projets créatifs de A à Z.
                   </p>
+                </li>
+              </ul>
+            </div>      
+
+            <div>
+              <h2>Formation</h2>
+              <ul className="split">
+                <li>
+                  <strong>
+                    Prochaine étape : CDA — Concepteur Développeur
+                    d'Applications
+                  </strong>
+                  <p>RNCP 6 (Bac+3/4) — alternance.</p>
+                </li>
+                <li>
+                  <strong>2025 – 2026 • Wild Code School</strong>
+                  <p>
+                    RNCP 5 (Bac+2), Développeur Web et Web Mobile (Full Stack,
+                    React/Node.js).
+                  </p>
+                </li>
+                <li>
+                  <strong>EDAA – Formation en graphisme</strong>
+                  <p>Design visuel, mise en page, retouche, composition.</p>
+                </li>
+                <li>
+                  <strong>Beaux-Arts</strong>
                 </li>
               </ul>
             </div>
@@ -107,6 +133,7 @@ export default function CvPage() {
               <ul className="dots">
                 <li>Français</li>
                 <li>Anglais</li>
+                <li>Russe</li>
               </ul>
             </div>
 
@@ -134,15 +161,13 @@ export default function CvPage() {
                 / Node.js), diplômée de la{" "}
                 <strong>Wild Code School / Simplon (DWWM, RNCP 5).</strong> À la
                 croisée du design UX/UI et du développement front-end /
-                back-end, formée aux Beaux-Arts et au design graphique, engagée
-                dans l'accessibilité numérique (RGAA, WCAG 2.1).
+                back-end, engagée dans l'accessibilité numérique (RGAA, WCAG 2.1).
               </p>
               <p>
                 <strong>Recherche contrat d'apprentissage</strong> —  18 mois à partir d'octobre 2026. 
                 Formation visée : CDA (Concepteur Développeur d'Applications, RNCP 6) 
                 chez Simplon – 686 h en téléprésentiel. Rythme : 3 semaines en entreprise / 
-                1 semaine en formation. Flexible sur l'école, le calendrier et la spécialisation, 
-                dans le périmètre du développement web / mobile.
+                1 semaine en formation. 
               </p>
               <p>
                 Bénéficiaire de la{" "}
@@ -153,93 +178,51 @@ export default function CvPage() {
                 ouvrant droit aux aides AGEFIPH employeur.
               </p>
               <p>
-                Dans l'attente du démarrage de l'alternance, disponible
-                immédiatement pour une{" "}
-                <strong>PMSMP (immersion professionnelle)</strong> afin de
-                découvrir le fonctionnement d'une équipe technique et de
-                démontrer ma capacité d'intégration sur le terrain.
+               Disponible immédiatement pour une{" "}
+                <strong>PMSMP (immersion professionnelle).</strong>
               </p>
             </div>
 
             <div className="block">
               <h2>Compétences techniques</h2>
+              <dl className="skills-list">
+                <dt>Frontend</dt>
+                <dd>HTML · CSS · Responsive design · JavaScript · TypeScript · React · Context API · Hooks</dd>
 
-              <div className="skills-table" aria-label="Compétences techniques">
-                <div className="skills-col">
-                  <h3>Frontend</h3>
-                  <p>
-                    HTML · CSS · Responsive design · JavaScript · TypeScript ·
-                    React · Context API · Hooks
-                  </p>
-                </div>
-                <div className="skills-col">
-                  <h3>Backend</h3>
-                  <p>
-                    Node.js · Express.js · MySQL · Architecture MVC · API REST ·
-                    JSON
-                  </p>
-                </div>
-                <div className="skills-col">
-                  <h3>Accessibilité &amp; Qualité</h3>
-                  <p>
-                    RGAA · WCAG 2.1 · attributs ARIA · Typographie accessible
-                  </p>
-                </div>
-                <div className="skills-col">
-                  <h3>Design &amp; Maquettage</h3>
-                  <p>
-                    UI/UX design · Wireframes · Figma · Charte graphique · Adobe
-                    Suite
-                  </p>
-                </div>
-                <div className="skills-col">
-                  <h3>Outils &amp; Méthodes</h3>
-                  <p>
-                    Git · GitHub · Méthodes Agiles · Scrum · Kanban / Trello ·
-                    Vercel
-                  </p>
-                </div>
-              </div>
+                <dt>Backend</dt>
+                <dd>Node.js · Express.js · MySQL · Architecture MVC · API REST · JSON</dd>
+
+                <dt>Accessibilité &amp; Qualité</dt>
+                <dd>RGAA · WCAG 2.1 · attributs ARIA · Typographie accessible</dd>
+
+                <dt>Design &amp; Maquettage</dt>
+                <dd>UI/UX design · Wireframes · Figma · Charte graphique · Adobe Suite</dd>
+
+                <dt>Outils &amp; Méthodes</dt>
+                <dd>Git · GitHub · Méthodes Agiles · Scrum · Kanban / Trello · Vercel</dd>
+
+                <dt>CMS</dt>
+                <dd>WordPress · Drupal · Joomla (projets freelance, intégration et maintenance de sites)</dd>
+              </dl>
             </div>
 
             {/* ---- Soft skills + Projets side by side ---- */}
-            <div className="two-columns">
+           
               <div className="pro-skills">
-                <h2>SOFT SKILLS &amp; COMPÉTENCES TRANSVERSALES</h2>
-                <ul>
-                  <li>
-                    <h3>Autonomie &amp; initiative</h3>
-                    {" "}– déploiement VPS en production réalisé en totale
-                    autonomie (hors programme de formation). Proposition
-                    architecturale (layouts par rôle) adoptée par l'équipe.
-                    Intégration de l'accessibilité numérique hors cahier des
-                    charges.
-                  </li>
+                        <h2>SOFT SKILLS &amp; COMPÉTENCES TRANSVERSALES</h2>
+                        <dl className="skills-list">
+                            <dt>Autonomie &amp; initiative</dt>
+                            <dd>déploiement VPS en production en totale autonomie. Proposition architecturale (layouts par rôle) adoptée par l'équipe. Intégration de l'accessibilité numérique (initiative personnelle).</dd>
 
-                  <li>
-                    <h3>Rigueur &amp; performance</h3>
-                    {" "}– travail en environnements à forte cadence sous
-                    contrainte de temps. Anticipation des besoins, vérification
-                    systématique, attention au détail.
-                  </li>
+                            <dt>Rigueur &amp; performance</dt>
+                            <dd>environnements à forte cadence, anticipation des besoins, vérification systématique, attention au détail.</dd>
 
-                  <li>
-                    <h3>Esprit d'équipe &amp; collaboration</h3>
-                    {" "}– communication proactive, transmission de
-                    connaissances, formation de nouveaux collaborateurs. Travail
-                    en téléprésentiel, revues de code (GitHub), méthodes Agiles
-                    (Scrum, Kanban).
-                  </li>
+                            <dt>Esprit d'équipe &amp; collaboration</dt>
+                            <dd>communication proactive, transmission de connaissances, revues de code (GitHub), méthodes Agiles (Scrum, Kanban).</dd>
 
-                  <li>
-                    <h3>Sensibilité UX et accessibilité :</h3>
-                    {" "}– culture visuelle nourrie par une veille design
-                    permanente et l'analyse de références UI/UX, identification
-                    des facteurs de réussite (ergonomie, lisibilité, hiérarchie
-                    visuelle). Conception d'interfaces inclusives, responsive
-                    design, maquettage Figma.
-                  </li>
-                </ul>
+                            <dt>Sensibilité UX &amp; accessibilité</dt>
+                            <dd>veille design, analyse de références UI/UX, conception d'interfaces inclusives, responsive design, maquettage Figma.</dd>
+                        </dl>
               </div>
 
               <div className="projets">
@@ -274,38 +257,8 @@ export default function CvPage() {
                   méthodes agiles.
                 </p>
               </div>
-            </div>
-
-            <div className="block">
-              <h2>FORMATION</h2>
-
-              <ul className="education-list">
-                <li className="education-item">
-                  <h3>2025 – 2026 • Wild Code School – Développeur Web</h3>
-                  <p>
-                    Titre RNCP niveau 5 (Bac+2), Développeur Web et Web Mobile
-                    (Full Stack, React/Node.js).
-                  </p>
-                </li>
-
-                <li className="education-item">
-                  <h3>
-                    Prochaine étape : CDA — Concepteur Développeur
-                    d'Applications
-                  </h3>
-                  <p>Titre RNCP niveau 6 (Bac+3/4) — alternance.</p>
-                </li>
-
-                <li className="education-item">
-                  <h3>2020 – 2023 • EDAA – Formation en graphisme</h3>
-                  <p>Design visuel, mise en page, retouche, composition.</p>
-                </li>
-
-                <li className="education-item">
-                  <h3>1990 – 1994 • Beaux-Arts – Russie</h3>
-                </li>
-              </ul>
-            </div>
+            
+            
           </section>
 
           {/* ================= SECONDARY (empty, kept for grid) ================= */}
