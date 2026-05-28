@@ -4,7 +4,7 @@ import logo from "../assets/images/logo-yk.svg";
 import "../styles/NavBar.css";
 
 const KEY_INFO =
-  "Informations clés: Développeur front-end / full stack (alternance) — Paris — FR / EN / RU";
+  "Informations clés: Développeuse front-end / full stack (CDI junior ou alternance) — Paris — FR / EN / RU";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,7 +1,8 @@
 // src/pages/CvPage.tsx
+import { Link } from "react-router-dom";
 import "../styles/CvPage.css";
 import photo from "../assets/images/yuliana-krasulya.jpg";
-import pdfUrl from "./CV-Yuliana-Krasulya.pdf";
+import pdfUrl from "./Developpeur-full-stack-Yuliana Krasulya.pdf";
 
 export default function CvPage() {
   return (
@@ -16,7 +17,6 @@ export default function CvPage() {
                 <img src={photo} alt="Photo de Yuliana Krasulya" />
               </div>
             </div>
-           
 
             <div className="aside-block contact">
               <h2>COORDONNÉES</h2>
@@ -71,55 +71,27 @@ export default function CvPage() {
                 CV en PDF
               </a>
             </div>
-           <div className="line" aria-hidden="true" />
-            <div>
-              <h2>Parcours pro</h2>
-              <ul className="split">
-                <li>
-                  <strong>
-                    Expérience opérationnelle orientée performance
-                    &amp; expérience utilisateur
-                  </strong>
-                  <p>
-                    Travail en environnements à forte cadence (grande
-                    distribution, restauration) anticipation des besoins et
-                    optimisation des flux de travail amélioration de l'efficacité
-                    opérationnelle et de la coordination des équipes
-                  </p>
-                </li>
 
-                <li>
-                  <strong>
-                    Designer graphique et plasticienne — Freelance
-                  </strong>
-                  <p>
-                    Création visuelle, illustration, design éditorial et mise en
-                    page pour l'édition. Conception de maquettes, gestion
-                    autonome de projets créatifs de A à Z.
-                  </p>
-                </li>
-              </ul>
-            </div>      
+            <div className="line" aria-hidden="true" />
 
             <div>
               <h2>Formation</h2>
               <ul className="split">
                 <li>
-                  <strong>
-                    Prochaine étape : CDA — Concepteur Développeur
-                    d'Applications
-                  </strong>
-                  <p>RNCP 6 (Bac+3/4) — alternance.</p>
-                </li>
-                <li>
-                  <strong>2025 – 2026 • Wild Code School</strong>
+                  <strong>CDA Éco-conception — RNCP 6 (Bac+3/4)</strong>
                   <p>
-                    RNCP 5 (Bac+2), Développeur Web et Web Mobile (Full Stack,
-                    React/Node.js).
+                    Simplon · démarrage octobre 2026 · alternance 18 mois ·
+                    3 sem. entreprise / 1 sem. formation.
                   </p>
                 </li>
                 <li>
-                  <strong>EDAA – Formation en graphisme</strong>
+                  <strong>2025 – 2026 · Wild Code School / Simplon</strong>
+                  <p>
+                    DWWM RNCP 5 (Bac+2) · Full Stack React / Node.js.
+                  </p>
+                </li>
+                <li>
+                  <strong>EDAA — Design graphique</strong>
                   <p>Design visuel, mise en page, retouche, composition.</p>
                 </li>
                 <li>
@@ -157,29 +129,60 @@ export default function CvPage() {
             <div className="cv-profil">
               <h2>Profil</h2>
               <p className="introText">
-                <strong>Développeuse Web Full Stack</strong> (React / TypeScript
-                / Node.js), diplômée de la{" "}
-                <strong>Wild Code School / Simplon (DWWM, RNCP 5).</strong> À la
-                croisée du design UX/UI et du développement front-end /
-                back-end, engagée dans l'accessibilité numérique (RGAA, WCAG 2.1).
+                <strong>Développeuse Full Stack React / TypeScript / Node.js</strong>,
+                diplômée <strong>DWWM RNCP 5</strong> (Wild Code School /
+                Simplon), avec expérience concrète d'applications déployées en
+                production sur VPS OVHcloud.
               </p>
               <p>
-                <strong>Recherche contrat d'apprentissage</strong> —  18 mois à partir d'octobre 2026. 
-                Formation visée : CDA (Concepteur Développeur d'Applications, RNCP 6) 
-                chez Simplon – 686 h en téléprésentiel. Rythme : 3 semaines en entreprise / 
-                1 semaine en formation. 
+                <strong>L'accessibilité</strong> n'est pas un sujet traité en
+                fin de projet, mais intégrée dès la conception des interfaces :
+                HTML5 sémantique, conformité RGAA et WCAG 2.1, attributs ARIA,
+                responsive design et attention particulière à la lisibilité des
+                contenus. Cette sensibilité s'appuie sur des convictions
+                professionnelles et sur une expérience personnelle du handicap{" "}
+                <strong>(RQTH)</strong>.
               </p>
               <p>
-                Bénéficiaire de la{" "}
-                <strong>
-                  RQTH — éligible à l'apprentissage sans limite d'âge.
-                </strong>{" "}
-                Autonomie complète, sans aucun aménagement spécifique. Embauche
-                ouvrant droit aux aides AGEFIPH employeur.
+                Formée au design graphique et aux arts visuels, j'apporte une
+                double culture design / intégration qui me permet de dialoguer
+                naturellement avec les équipes UX/UI, de comprendre les
+                contraintes visuelles d'une maquette et de produire des
+                interfaces cohérentes, accessibles et fidèles aux intentions
+                produit. Figma et Adobe Suite font partie de mes outils de
+                travail habituels.
               </p>
               <p>
-               Disponible immédiatement pour une{" "}
-                <strong>PMSMP (immersion professionnelle).</strong>
+                Lors de ma <strong>PMSMP chez Formly (EdTech / LMS)</strong>,
+                j'ai travaillé sur l'analyse et la documentation de trois
+                codebases en production sans documentation préexistante. Reverse
+                engineering de modules Auth JWT, Stripe Connect, LMS, RBAC et
+                Mux Video, cartographie technique des flux applicatifs, rédaction
+                de livrables destinés à accélérer l'onboarding développeur :
+                cette expérience a renforcé ma capacité à comprendre rapidement
+                une architecture existante et à évoluer dans des environnements
+                techniques complexes.
+              </p>
+              <p>
+                Je recherche un environnement engineering structuré, orienté
+                qualité logicielle, collaboration et amélioration continue :
+                revues de code, standards partagés, accessibilité numérique,
+                méthodes Agile/Scrum et culture produit solide. Mon objectif est
+                de <strong>progresser durablement au sein d'une équipe
+                expérimentée</strong>, de monter en responsabilité sur des
+                projets full-stack modernes et de devenir à terme une
+                développeuse fiable sur laquelle une équipe peut réellement
+                compter.
+              </p>
+              <p className="profil-note">
+                <em>
+                  Disponible immédiatement en{" "}
+                  <strong>CDI junior</strong> ou en{" "}
+                  <strong>alternance CDA RNCP 6</strong> à partir d'octobre
+                  2026.{" "}
+                  <strong>RQTH : autonomie complète</strong>, sans aménagement
+                  spécifique.
+                </em>
               </p>
             </div>
 
@@ -187,78 +190,211 @@ export default function CvPage() {
               <h2>Compétences techniques</h2>
               <dl className="skills-list">
                 <dt>Frontend</dt>
-                <dd>HTML · CSS · Responsive design · JavaScript · TypeScript · React · Context API · Hooks</dd>
+                <dd>
+                  React 19 · TypeScript · JavaScript · HTML5 sémantique · CSS3 ·
+                  Responsive design · Context API · Hooks · Next.js (notions)
+                </dd>
 
                 <dt>Backend</dt>
-                <dd>Node.js · Express.js · MySQL · Architecture MVC · API REST · JSON</dd>
+                <dd>
+                  Node.js · Express.js · REST API · JWT · Argon2id · MySQL ·
+                  Architecture MVC
+                </dd>
+
+                <dt>DevOps &amp; Infrastructure</dt>
+                <dd>
+                  VPS OVHcloud · Nginx · PM2 · SSH · Docker (en cours) · Git ·
+                  GitHub · GitLab
+                </dd>
 
                 <dt>Accessibilité &amp; Qualité</dt>
-                <dd>RGAA · WCAG 2.1 · attributs ARIA · Typographie accessible</dd>
+                <dd>RGAA · WCAG 2.1 · ARIA · Biome · Jest · Swagger</dd>
 
                 <dt>Design &amp; Maquettage</dt>
-                <dd>UI/UX design · Wireframes · Figma · Charte graphique · Adobe Suite</dd>
+                <dd>
+                  UI/UX design · Figma · Adobe Suite · Wireframes · Charte
+                  graphique
+                </dd>
 
-                <dt>Outils &amp; Méthodes</dt>
-                <dd>Git · GitHub · Méthodes Agiles · Scrum · Kanban / Trello · Vercel</dd>
-
-                <dt>CMS</dt>
-                <dd>WordPress · Drupal · Joomla (projets freelance, intégration et maintenance de sites)</dd>
+                <dt>Méthodes</dt>
+                <dd>Scrum · Agile · Kanban</dd>
               </dl>
             </div>
 
-            {/* ---- Soft skills + Projets side by side ---- */}
-           
-              <div className="pro-skills">
-                        <h2>SOFT SKILLS &amp; COMPÉTENCES TRANSVERSALES</h2>
-                        <dl className="skills-list">
-                            <dt>Autonomie &amp; initiative</dt>
-                            <dd>déploiement VPS en production en totale autonomie. Proposition architecturale (layouts par rôle) adoptée par l'équipe. Intégration de l'accessibilité numérique (initiative personnelle).</dd>
+            <div className="block experience">
+              <h2>Expériences professionnelles</h2>
+              <ul className="exp-list">
+                <li>
+                  <div className="exp-header">
+                    <strong>
+                      Stagiaire — Documentation Technique Full Stack
+                    </strong>
+                    <span className="exp-meta">
+                      Formly · EdTech / LMS · Paris · PMSMP (France Travail)
+                    </span>
+                  </div>
+                  <p>
+                    Mission : créer from scratch la documentation technique
+                    exhaustive d'une plateforme EdTech full-stack en production.
+                     Objectif :
+                    permettre l'onboarding d'un nouveau développeur en moins de
+                    24 heures.
+                  </p>
+                  <p>
+                    <strong>Analyse de codebase —</strong> lecture et
+                    cartographie de 3 repos en production sans doc préexistante :
+                    backend (Node.js · Fastify · TypeScript · Prisma ORM · MySQL ·
+                    Redis · Docker · Nginx), frontend web (React · Next.js · App
+                    Router) et mobile (React Native).
+                  </p>
+                  <p>
+                    <strong>5 modules documentés —</strong> Authentification
+                    (JWT · Passport.js · Zod · cookies httpOnly · flux Web vs
+                    Mobile) · Paiement (Stripe Connect · webhooks · distribution
+                    marketplace) · LMS (accès aux cours · progression utilisateur ·
+                    contrôle d'accès) · Médias (upload · streaming HLS via Mux) ·
+                    Rôles &amp; Admin (RBAC · permissions granulaires).
+                  </p>
+                  <p>
+                    <strong>Livrables —</strong> diagrammes de séquence SVG
+                    (code pur · convention couleur par couche) · fichiers Markdown
+                    structurés en 10 sections (style Stripe Docs) · inventaires de
+                    codebase · livrables validés par le lead développeur.
+                  </p>
+                </li>
+                <li>
+                  <div className="exp-header">
+                    <strong>Designer graphique &amp; plasticienne — Freelance</strong>
+                  </div>
+                  <p>
+                    Création visuelle, illustration, design éditorial et mise en
+                    page. Gestion autonome de projets créatifs de A à Z, de la
+                    conception à la livraison client.
+                  </p>
+                </li>
+                <li>
+                  <div className="exp-header">
+                    <strong>
+                      Graphiste maquettiste &amp; illustratrice — Maison
+                      d'édition de livres
+                    </strong>
+                  </div>
+                  <p>
+                    Mise en page de textes longs, choix typographiques, design
+                    de couvertures, création d'illustrations originales, retouche
+                    photographique, préparation à l'impression (prépresse).
+                  </p>
+                </li>
+                <li>
+                  <div className="exp-header">
+                    <strong>
+                      Graphiste maquettiste &amp; illustratrice — Édition d'un
+                      journal pédagogique
+                    </strong>
+                  </div>
+                  <p>
+                    Mise en page de contenus éditoriaux, choix typographiques
+                    adaptés au lectorat, design de couvertures, illustrations,
+                    retouche photographique, préparation prépresse.
+                  </p>
+                </li>
+                <li>
+                  <div className="exp-header">
+                    <strong>
+                      Expérience opérationnelle — Grande distribution &amp;
+                      restauration
+                    </strong>
+                  </div>
+                  <p>
+                    Environnements à forte cadence. Coordination d'équipe,
+                    rigueur opérationnelle, anticipation des besoins sous flux
+                    intensif.
+                  </p>
+                </li>
+              </ul>
+            </div>
 
-                            <dt>Rigueur &amp; performance</dt>
-                            <dd>environnements à forte cadence, anticipation des besoins, vérification systématique, attention au détail.</dd>
-
-                            <dt>Esprit d'équipe &amp; collaboration</dt>
-                            <dd>communication proactive, transmission de connaissances, revues de code (GitHub), méthodes Agiles (Scrum, Kanban).</dd>
-
-                            <dt>Sensibilité UX &amp; accessibilité</dt>
-                            <dd>veille design, analyse de références UI/UX, conception d'interfaces inclusives, responsive design, maquettage Figma.</dd>
-                        </dl>
+            <div className="projets">
+              <h2>Projets réalisés</h2>
+              <p>
+                <strong>
+                  P'tit Cahier — Application web de communication école-parents
+                </strong>
+              </p>
+              <p>
+                Projet full stack déployé en production — Wild Code School.
+                Stack : React 19 · TypeScript · Vite · CSS Modules · Node.js ·
+                Express · MySQL 8.0 · JWT · Argon2id · Nginx · PM2 · VPS
+                OVHcloud.
+              </p>
+              <p>
+                Points différenciants : déploiement VPS en totale autonomie
+                (SSH · Nginx · PM2, sans Vercel ni Heroku) · authentification
+                complète JWT + Argon2id · contrôle d'accès par rôle avec layouts
+                adaptatifs · requêtes SQL complexes (jointures multi-tables,
+                GROUP_CONCAT) · accessibilité RGAA / WCAG 2.1 intégrée dès la
+                conception (initiative personnelle) · audit éco-conception en
+                cours (WebP/AVIF, lazy loading, gzip, bundle optimization).
+              </p>
+              <p>
+                Autres projets : applications React (TypeScript, APIs externes,
+                gestion d'état), jeux en canvas, pages HTML/CSS. Maquettes Figma
+                et collaboration Agile.
+              </p>
+              <div className="project-chips">
+                <Link
+                  to="/articles/14-04-2026-ptit-cahier"
+                  className="project-chip"
+                >
+                  P'tit Cahier ↗
+                </Link>
+                <Link
+                  to="/articles/31-12-2025-epic-battle"
+                  className="project-chip"
+                >
+                  TS Epic Battle ↗
+                </Link>
+                <Link to="/projets#chromosphere" className="project-chip">
+                  Chromosphère ↗
+                </Link>
+                <Link
+                  to="/projets"
+                  className="project-chip project-chip--all"
+                >
+                  Tous les projets ↗
+                </Link>
               </div>
+            </div>
 
-              <div className="projets">
-                <h2>PROJETS réalisés</h2>
-                <p>
-                  <strong>
-                    P'tit Cahier — Application web de communication
-                    école-parents
-                  </strong>
-                  <br />
-                  Projet collaboratif full stack — Wild Code School : application
-                  déployée en production.
-                  <br />
-                  Stack : React 19 · TypeScript · Vite · CSS Modules · Node.js ·
-                  Express · MySQL 8.0 · JWT · Argon2id · Nginx · PM2 · VPS
-                  OVHcloud
-                </p>
-                <p>
-                  Réalisations personnelles : architecture front (layouts par
-                  rôle), composants métier (tickets, modale, filtres), requêtes
-                  SQL complexes (jointures, GROUP_CONCAT), déploiement VPS en
-                  autonomie, intégration de l'accessibilité numérique (initiative
-                  personnelle).
-                </p>
-                <p>
-                  Développement de projets individuels (solo rush) et
-                  collaboratifs, allant de pages HTML/CSS simples à des
-                  applications web complètes en React. Intégration d'APIs
-                  externes, développement d'interfaces dynamiques, gestion
-                  d'état, organisation du code, mise en place d'algorithmes
-                  simples, maquettes Figma et collaboration en équipe selon les
-                  méthodes agiles.
-                </p>
-              </div>
-            
-            
+            <div className="pro-skills">
+              <h2>Soft Skills &amp; Compétences transversales</h2>
+              <dl className="skills-list">
+                <dt>Autonomie &amp; initiative</dt>
+                <dd>
+                  déploiement VPS en production en totale autonomie · proposition
+                  architecturale (layouts par rôle) adoptée par l'équipe ·
+                  intégration de l'accessibilité numérique (initiative personnelle).
+                </dd>
+
+                <dt>Rigueur &amp; attention au détail</dt>
+                <dd>
+                  vérification systématique · zéro livrable "à peu près bon" ·
+                  chaque composant aria-labellisé, chaque requête SQL testée.
+                </dd>
+
+                <dt>Esprit d'équipe &amp; collaboration</dt>
+                <dd>
+                  communication proactive · transmission de connaissances · revues
+                  de code GitHub · méthodes Agiles (Scrum, Kanban).
+                </dd>
+
+                <dt>Sensibilité UX &amp; accessibilité</dt>
+                <dd>
+                  lecture de maquettes Figma · conception d'interfaces inclusives ·
+                  responsive design · veille design active.
+                </dd>
+              </dl>
+            </div>
           </section>
 
           {/* ================= SECONDARY (empty, kept for grid) ================= */}
