@@ -46,10 +46,15 @@ function Home() {
             <p>
               Je continue à nourrir cette double culture au quotidien : veille
               UI/UX, analyse d’interfaces, pratiques front-end modernes,
-              développement full stack. C’est ce croisement entre sensibilité
+              développement full stack. C’est ce croisement entre vision 
               produit, qualité visuelle et compétences techniques concrètes que
               j’apporte à une équipe qui prend au sérieux la qualité des
               interfaces qu’elle livre.
+            </p>
+            <p>
+              Ce positionnement se traduit concrètement : A11y Canvas, un générateur de chartes graphiques accessibles
+              déployé en production, intègre au cœur de sa logique un algorithme de vérification de contraste
+              WCAG 2.1 en temps réel — non pas comme feature, mais comme colonne vertébrale du produit.
             </p>
           </div>
         </section>

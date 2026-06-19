@@ -4,7 +4,7 @@ import logo from "../assets/images/logo-yk.svg";
 import "../styles/NavBar.css";
 
 const KEY_INFO =
-  "Informations clés: Développeuse front-end / full stack (CDI junior ou alternance) — Paris — FR / EN / RU";
+  "Développeuse Full Stack · CDI junior · alternance CDA oct. 2026 · Île-de-France · FR · EN · RU";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,19 +74,9 @@ function NavBar() {
           </div>
         </div>
 
-        <div className="nav-bottom" aria-label={KEY_INFO}>
-          <div className="nav-ticker">
-            <div className="nav-ticker-track">
-              <span className="nav-ticker-text">{KEY_INFO}</span>
-              <span className="nav-ticker-sep" aria-hidden="true">
-                •
-              </span>
-              <span className="nav-ticker-text" aria-hidden="true">
-                {KEY_INFO}
-              </span>
-            </div>
-          </div>
-        </div>
+<div className="nav-bottom">
+  <p className="nav-ticker-text">{KEY_INFO}</p>
+</div>
 
         <div
           id={menuId}

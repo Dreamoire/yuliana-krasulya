@@ -65,6 +65,41 @@
   background: rgb(74 74 80 / 0.45);
 }
 
+.project-nav:focus-visible {
+  outline: 2px solid rgb(252 253 254 / 0.8);
+  outline-offset: 2px;
+}
+
+/* Bouton pause/reprendre (WCAG 2.2.2) */
+.carousel-pause {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(74 74 80 / 0.28);
+  backdrop-filter: blur(6px);
+  color: rgb(252 253 254 / 1);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.carousel-pause:hover {
+  background: rgb(74 74 80 / 0.45);
+}
+
+.carousel-pause:focus-visible {
+  outline: 2px solid rgb(252 253 254 / 0.8);
+  outline-offset: 2px;
+}
+
 .project-nav--prev {
   left: -6px;
 }
