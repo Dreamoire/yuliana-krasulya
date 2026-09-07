@@ -5,6 +5,7 @@ import projetCard3 from "../assets/images/chromosphere.jpg";
 import projetCard4 from "../assets/images/time-to-eat.jpg";
 import projetCard5 from "../assets/images/ts-epic-battle.jpg";
 import projetCard6 from "../assets/images/ptit-cahier.jpg";
+import projetCard7 from "../assets/images/a11y-canvas.jpg";
 
 export interface Project {
   id: string;
@@ -18,6 +19,16 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: "proj-7",
+    title: "A11y Canvas",
+    shortDescription:
+      "Générateur de chartes graphiques accessibles · WCAG 2.1 · Next.js · TypeScript",
+    imageSrc: projetCard7,
+    slug: "a11y-canvas",
+    articleSlug: "07-09-2026-a11y-canvas",
+    liveUrl: "https://a11y-canvas.fr/",
+  },
     {
     id: "proj-6",
     title: "P'tit Cahier",
@@ -73,7 +84,7 @@ export const projects: Project[] = [
     shortDescription: "Application React pour explorer la vie de mon sheltie.",
     imageSrc: projetCard1,
     slug: "vostok-express",
-    
+
   },
 
 ];
